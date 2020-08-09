@@ -6,9 +6,8 @@ class Artist < ActiveRecord::Base
     self.songs.first
   end 
   
-
   def get_genre_of_first_song
-    get_first_song.self.genre.first
+    self.songs.first.genre
   end
 
   def song_count
